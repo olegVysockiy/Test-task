@@ -1,4 +1,4 @@
-const initStateUser = {
-  user: [],
+const initState = {
+  users: [],
 }
-export default initStateUser
+export default initState

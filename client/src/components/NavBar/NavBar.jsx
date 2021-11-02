@@ -62,10 +62,6 @@ HomepageHeading.propTypes = {
   mobile: PropTypes.bool,
 }
 
-/* Heads up!
- * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
- * It can be more complicated, but you can create really flexible markup.
- */
 class DesktopContainer extends Component {
   state = {}
 
@@ -97,18 +93,19 @@ class DesktopContainer extends Component {
               size='large'
             >
               <Container>
-                <Menu.Item as='a' active>
-                  Home
-                </Menu.Item>
-                <Menu.Item as='a'>Work</Menu.Item>
-                <Menu.Item as='a'>Company</Menu.Item>
-                <Menu.Item as='a'>Careers</Menu.Item>
-                <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>
-                    Log in
+                
+                <Menu.Item position='left'>
+                <Button as='a' inverted={!fixed}>
+                <Link to='/users'> Home </Link>
+                  </Button>
+                  <Button as='a' inverted={!fixed} style={{ marginLeft: '0.5em' }}>
+                    Chat
+                  </Button>
+                  <Button as='a' inverted={!fixed} style={{ marginLeft: '0.5em' }}>
+                    Profile
                   </Button>
                   <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-                  <Link to='/signUp'> Sign up </Link>
+                    <Link to='/signUp'> Log in </Link>
                   </Button>
                 </Menu.Item>
               </Container>
@@ -162,7 +159,7 @@ class MobileContainer extends Component {
             <Segment
               inverted
               textAlign='center'
-              style={{ minHeight: 350, padding: '1em 0em' }}
+              style={{ minHeight: 150, padding: '1em 0em' }}
               vertical
             >
               <Container>
@@ -196,10 +193,6 @@ MobileContainer.propTypes = {
 }
 
 const ResponsiveContainer = ({ children }) => (
-  /* Heads up!
-   * For large applications it may not be best option to put all page into these containers at
-   * they will be rendered twice for SSR.
-   */
   <MediaContextProvider>
     <DesktopContainer>{children}</DesktopContainer>
     <MobileContainer>{children}</MobileContainer>
@@ -212,7 +205,7 @@ ResponsiveContainer.propTypes = {
 
 const EvernoteNavBar = () => (
   <ResponsiveContainer>
-    <Segment style={{ padding: '8em 0em' }} vertical>
+    <Segment style={{ padding: '4em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
           <Grid.Column width={8}>
@@ -223,7 +216,7 @@ const EvernoteNavBar = () => (
       </Grid>
     </Segment>
 
-    
+
   </ResponsiveContainer>
 )
 

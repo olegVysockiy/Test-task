@@ -1,15 +1,17 @@
 import { Button, Form, Grid, Header, Segment } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 import { useHistory } from 'react-router-dom'
-
+import { useDispatch } from 'react-redux'
+import { addNewUserAction } from '../../redux/actions/userAction'
 
 export default function SignUp() {
+  const dispatch = useDispatch()
   const history = useHistory()
   const addHandler = (e) => {
     e.preventDefault()
     const data = Object.fromEntries(new FormData(e.target))
-    console.log(data)
-    history.push('/')
+    dispatch(addNewUserAction(data))
+    history.push('/users')
   }
   return (<Grid textAlign='center' style={{ height: '0vh' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
@@ -33,7 +35,7 @@ export default function SignUp() {
             placeholder='password'
           />
           <Button color='teal' fluid size='large'>
-          Зарегистрироваться
+            Зарегистрироваться
           </Button>
         </Segment>
       </Form>
