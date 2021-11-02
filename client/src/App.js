@@ -1,9 +1,23 @@
+import NavBar from './components/NavBar/NavBar'
+import Login from './components/Login/Login'
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      hello world
-    </div>
+    <>
+      <Router>
+        <NavBar />
+        <Switch>
+          <Route exact path='/test' component={Login} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
