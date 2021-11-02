@@ -108,7 +108,7 @@ class DesktopContainer extends Component {
                     Log in
                   </Button>
                   <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-                  <Link to='/test'> Sign up </Link>
+                  <Link to='/signUp'> Sign up </Link>
                   </Button>
                 </Menu.Item>
               </Container>

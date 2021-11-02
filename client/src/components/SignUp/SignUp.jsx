@@ -1,11 +1,9 @@
 import { Button, Form, Grid, Header, Segment } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
-import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 
 
-export default function Login() {
-  const dispatch = useDispatch()
+export default function SignUp() {
   const history = useHistory()
   const addHandler = (e) => {
     e.preventDefault()
