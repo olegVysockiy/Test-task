@@ -1,4 +1,7 @@
 const initState = {
-  users: [],
+  users: [
+    { email: 'oleg@mail.ru' },
+    { email: 'semen@mail.ru' },
+  ],
 }
 export default initState

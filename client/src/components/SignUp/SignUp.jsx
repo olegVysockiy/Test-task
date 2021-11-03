@@ -11,7 +11,9 @@ export default function SignUp() {
     e.preventDefault()
     const data = Object.fromEntries(new FormData(e.target))
     dispatch(addNewUserAction(data))
-    history.push('/users')
+    localStorage.clear()
+    localStorage.setItem('currentUser', data.email)
+    history.push('/')
   }
   return (<Grid textAlign='center' style={{ height: '0vh' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>

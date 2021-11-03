@@ -96,7 +96,7 @@ class DesktopContainer extends Component {
                 
                 <Menu.Item position='left'>
                 <Button as='a' inverted={!fixed}>
-                <Link to='/users'> Home </Link>
+                <Link to='/'> Home </Link>
                   </Button>
                   <Button as='a' inverted={!fixed} style={{ marginLeft: '0.5em' }}>
                     Chat
@@ -203,7 +203,7 @@ ResponsiveContainer.propTypes = {
   children: PropTypes.node,
 }
 
-const EvernoteNavBar = () => (
+const NavBar = () => (
   <ResponsiveContainer>
     <Segment style={{ padding: '4em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
@@ -220,4 +220,4 @@ const EvernoteNavBar = () => (
   </ResponsiveContainer>
 )
 
-export default EvernoteNavBar
+export default NavBar
