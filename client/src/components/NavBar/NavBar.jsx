@@ -99,7 +99,7 @@ class DesktopContainer extends Component {
                 <Link to='/'> Home </Link>
                   </Button>
                   <Button as='a' inverted={!fixed} style={{ marginLeft: '0.5em' }}>
-                    Chat
+                  <Link to='/chat'> Chat </Link>
                   </Button>
                   <Button as='a' inverted={!fixed} style={{ marginLeft: '0.5em' }}>
                     Profile

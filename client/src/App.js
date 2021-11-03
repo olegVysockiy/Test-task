@@ -8,6 +8,7 @@ import SignUp from './components/SignUp/SignUp';
 import Users from "./components/Users/Users";
 import { useHistory } from "react-router";
 import { useEffect } from "react";
+import Chat from "./components/Chat/Chat";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path='/' component={Users} />
+          <Route exact path='/chat' component={Chat} />
           <Route exact path='/signUp' component={SignUp} />
         </Switch>
       </Router>
